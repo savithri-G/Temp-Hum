@@ -1,0 +1,260 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* Header Styling */
+.header {
+  background-color: #00796b;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+/* Sidebar container */
+.icon-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ffffff; */
+  padding-top: 20px;
+  gap: 20px;
+}
+
+/* Sidebar icons */
+.sidebar-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+  
+}
+
+/* Icon link styling */
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  
+}
+
+.icon-link:hover .sidebar-icon {
+  transform: scale(1.2);
+}
+.home-container h1
+{
+  font-weight: bold;
+  color:rgb(10, 16, 53);
+}
+.home-container p
+{
+  font-weight: bold;
+  color:rgb(255, 255, 255);
+}
+
+/* Add timestamp styles */
+.timestamp {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #f8f8f8;
+  text-shadow: 2px 2px 8px #a36736;
+  font-weight: bold;
+  font-style: italic;
+
+ 
+}
+
+/* Container for the dashboard */
+.dashboard-container {
+  background-color: #c7e4ec;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+  margin: 20px auto;
+  flex-grow: 1;
+  background: url("../TH/images/temp.jpg");
+  object-fit: contain;
+}
+
+/* Locations section */
+.locations {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+  
+}
+.allthree
+{
+  margin: 10px;
+}
+/* Location Styling */
+.location {
+  background-color: #e0f7fa;
+  padding: 50px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 0px #00796b;
+  
+}
+
+.location:hover {
+  transform: scale(1.05);
+}
+
+.location h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color:#3661a3;
+  text-shadow: 0px 0px 4px #00796b;
+}
+
+.location .details {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+.location .details .loading {
+  font-style: italic;
+  color: #888;
+}
+
+.location .details span {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+/* Add better alignment for the data */
+.details p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.support
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:rgb(10, 16, 53);
+  font-weight: bold;
+  font-size: 25px;
+}
+/* Footer Styling */
+.footer {
+  background-color: #00796b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .locations {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* CSS to hide details initially and show when visible */
+.location .details {
+  display: none; 
+}
+
+.location .details.visible {
+  display: block; 
+}
+
+/* General Responsive Design for Locations */
+@media (max-width: 1200px) {
+  .locations {
+    gap: 20px;
+  }
+  
+  .location {
+    width: 250px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .locations {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .location {
+    width: 220px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .locations {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .location {
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .location {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .location h2 {
+    font-size: 1.5rem;
+  }
+
+  .location .details {
+    font-size: 1rem;
+  }
+}
